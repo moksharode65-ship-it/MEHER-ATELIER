@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#121212" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>MEHER ATELIER — Curated Women's Kurtis, Farshi Salwar Suits & Ethnic Wear | Amazon Associates</title>
+  <meta name="description" content="Shop hand-picked women's cotton kurtis, farshi salwar suits, kurti palazzo sets, and festive anarkalis verified on Amazon with fast Prime delivery." />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span class="badge">AMAZON ASSOCIATES</span>
+    <span>⚡ Curated Indian Ethnic Wear: 100% Verified Quality Kurtis & Salwar Suit Sets Fulfilled by Amazon</span>
+  </div>
+
+  <!-- Main Navbar -->
+  <header class="header">
+    <div class="container header-inner">
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Open Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <a href="#" class="brand">
+        MEHER<span>.</span>
+        <span class="brand-tag">Curated Ethnic Fashion</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links">
+        <a href="#shop" class="active" onclick="setCategory('all', this)">All Styles</a>
+        <a href="#shop" onclick="setCategory('farshi-suits', this)">Farshi Salwar Suits</a>
+        <a href="#shop" onclick="setCategory('palazzo', this)">Kurta & Palazzo Sets</a>
+        <a href="#shop" onclick="setCategory('suits', this)">Festive 3-Piece Sets</a>
+        <a href="#shop" onclick="setCategory('short-kurti', this)">Short Kurtis</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Search Bar -->
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search kurtis, farshi suits..." autocomplete="off" />
+        </div>
+
+        <!-- Wishlist Button -->
+        <button class="action-btn" title="Saved Wishlist" onclick="openWishlistDrawer()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="badge-count" id="wishlistCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Side Navigation Drawer -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="toggleMobileNav()"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-header">
+      <div class="brand">MEHER<span>.</span><span class="brand-tag" style="display:block; font-size:0.65rem;">Ethnic Fashion</span></div>
+      <button class="close-btn" onclick="toggleMobileNav()">&times;</button>
+    </div>
+    <div class="mobile-nav-body">
+      <div class="mobile-nav-label">Shop Collections</div>
+      <nav class="mobile-category-links">
+        <a href="#shop" class="mobile-nav-item active" onclick="setCategory('all'); toggleMobileNav();">
+          <span>👗 All Styles (14)</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#shop" class="mobile-nav-item" onclick="setCategory('farshi-suits'); toggleMobileNav();">
+          <span>🌸 Farshi Salwar Suits</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#shop" class="mobile-nav-item" onclick="setCategory('palazzo'); toggleMobileNav();">
+          <span>👘 Kurta & Palazzo Sets</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#shop" class="mobile-nav-item" onclick="setCategory('suits'); toggleMobileNav();">
+          <span>✨ Festive 3-Piece Sets</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#shop" class="mobile-nav-item" onclick="setCategory('short-kurti'); toggleMobileNav();">
+          <span>👚 Short Kurtis & Tunics</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#shop" class="mobile-nav-item" onclick="setCategory('anarkali'); toggleMobileNav();">
+          <span>👑 Anarkali Sets</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </nav>
+
+      <div class="mobile-nav-footer">
+        <div class="amazon-badge-pill">
+          <span>amazon <strong>associates</strong></span>
+          <p>Curated verified ethnic fashion fulfilled directly by Amazon India</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <!-- Hero Banner -->
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-text-side">
+          <div class="hero-tag">
+            <span></span>
+            2026 Festive & Daily Ethnic Capsule
+          </div>
+          <h1 class="hero-title">
+            Authentic Ethnic Wear, <em>Thoughtfully</em> Curated.
+          </h1>
+          <p class="hero-desc">
+            Skip through thousands of mediocre listings. We research, test, and curate the highest rated, durable cotton kurtis, traditional Farshi salwar suits, and festive sets available on Amazon India with seamless Prime checkout.
+          </p>
+          <div class="hero-btns">
+            <a href="#shop" class="btn-primary">
+              Explore Collection
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-img-box">
+            <img src="images/image7.png" alt="ANNI DESIGNER Farshi Salwar Suit" />
+          </div>
+          <div class="hero-float-card">
+            <div class="icon-box">✓</div>
+            <div>
+              <strong>Prime Verified</strong>
+              <p>Top 1% Customer Rated Ethnic Outfits</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transparent Affiliate Disclosure Strip -->
+    <section class="affiliate-badge-strip">
+      <div class="info-left">
+        <div class="amazon-logo-mark">
+          amazon <span>associates</span>
+        </div>
+        <div class="affiliate-text">
+          <strong>Amazon Associate Transparency:</strong> As an Amazon Associate, we earn from qualifying purchases at <strong>no extra cost to you</strong>. You enjoy Amazon India's official prices, fast Prime delivery, and hassle-free returns.
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Catalog Section -->
+    <section id="shop">
+      <div class="section-header">
+        <span class="section-tag">Hand-Selected Ethnic Wardrobe</span>
+        <h2 class="section-title">The Women's Kurti & Salwar Suit Catalog</h2>
+        <p class="section-desc">Regal Farshi salwar suits, daily wear cotton kurtis, flowy palazzo sets, and festive wedding ensembles crafted for timeless grace.</p>
+      </div>
+
+      <!-- Filters & Sorting Bar -->
+      <div class="filters-bar">
+        <div class="category-pills">
+          <button class="pill-btn active" onclick="setCategory('all', this)">All Styles (14)</button>
+          <button class="pill-btn" onclick="setCategory('farshi-suits', this)">Farshi Salwar Suits</button>
+          <button class="pill-btn" onclick="setCategory('palazzo', this)">Kurta & Palazzo Sets</button>
+          <button class="pill-btn" onclick="setCategory('suits', this)">Festive 3-Piece Sets</button>
+          <button class="pill-btn" onclick="setCategory('short-kurti', this)">Short Kurtis & Tunics</button>
+          <button class="pill-btn" onclick="setCategory('anarkali', this)">Anarkali Sets</button>
+        </div>
+
+        <div class="sort-select-wrapper">
+          <span id="resultsCount">Loading items...</span>
+          <select id="sortSelect" class="sort-select">
+            <option value="featured">Featured Picks</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Dynamic Product Grid -->
+      <div class="product-grid" id="productGrid">
+        <!-- Rendered via app.js -->
+      </div>
+    </section>
+
+    <!-- Curator Story Banner -->
+    <section class="curator-card">
+      <div class="curator-content">
+        <h3>How We Curate Our Ethnic Collection</h3>
+        <p>
+          Amazon India features thousands of ethnic apparel listings, but finding genuine 100% breathable cotton, pure viscose, colorfast hand-prints, and durable stitching is tough. We evaluate embroidery quality, verified customer feedback, and shrinkage data to bring only top tier ethnic wear right here.
+        </p>
+        <div class="curator-badge-tags">
+          <span>🌿 100% Breathable Cottons & Viscose</span>
+          <span>⭐ 4.3+ Star Verified Only</span>
+          <span>📦 Fulfilled & Backed by Amazon Prime</span>
+        </div>
+      </div>
+      <a href="#shop" class="btn-primary" style="background:#581c87; color:#fff; white-space:nowrap;">
+        Browse All Styles
+      </a>
+    </section>
+  </main>
+
+  <!-- Quick View Product Detail Modal -->
+  <div class="modal-overlay" id="productDetailModal" onclick="if(event.target === this) closeProductModal()">
+    <div class="modal-dialog" id="productDetailContent" style="max-width:850px; padding:0; overflow:hidden;">
+      <!-- Injected by app.js -->
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer -->
+  <div class="drawer-overlay" id="wishlistOverlay" onclick="closeWishlistDrawer()"></div>
+  <aside class="wishlist-drawer" id="wishlistDrawer">
+    <div class="drawer-header">
+      <h3 style="font-size:1.2rem;">Saved Favorites</h3>
+      <button class="close-btn" onclick="closeWishlistDrawer()">&times;</button>
+    </div>
+    <div class="drawer-body" id="wishlistItemsList">
+      <!-- Injected by app.js -->
+    </div>
+  </aside>
+
+  <!-- Interactive Toast Notification -->
+  <div class="toast" id="toastNotification"></div>
+
+  <!-- Mobile Bottom App Bar (visible on mobile only) -->
+  <nav class="mobile-bottom-bar" id="mobileBottomBar">
+    <a href="#shop" class="bottom-bar-item active" onclick="setCategory('all'); setActiveBottomTab(this);">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+      <span>Shop</span>
+    </a>
+    <button class="bottom-bar-item" onclick="toggleMobileNav();">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="8" y1="6" x2="21" y2="6"></line>
+        <line x1="8" y1="12" x2="21" y2="12"></line>
+        <line x1="8" y1="18" x2="21" y2="18"></line>
+        <line x1="3" y1="6" x2="3.01" y2="6"></line>
+        <line x1="3" y1="12" x2="3.01" y2="12"></line>
+        <line x1="3" y1="18" x2="3.01" y2="18"></line>
+      </svg>
+      <span>Categories</span>
+    </button>
+    <button class="bottom-bar-item" onclick="focusSearch();">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <span>Search</span>
+    </button>
+    <button class="bottom-bar-item" onclick="openWishlistDrawer();">
+      <div class="bottom-icon-wrap">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <span class="badge-count bottom-badge" id="bottomWishlistCount">0</span>
+      </div>
+      <span>Wishlist</span>
+    </button>
+  </nav>
+
+  <!-- Simple Clean Footer -->
+  <footer class="footer-clean">
+    <div class="container">
+      <div class="footer-clean-inner">
+        <p class="footer-disclosure">
+          <strong>Amazon Associate Disclosure:</strong> Meher Atelier is a participant in the Amazon Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.in.
+        </p>
+        <p class="footer-copy">
+          © 2026 MEHER ATELIER. All rights reserved. Handpicked Indian Ethnic Fashion & Kurtis.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
