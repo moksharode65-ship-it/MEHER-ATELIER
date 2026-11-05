@@ -99,10 +99,11 @@ button {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
   transition: var(--transition);
 }
 
@@ -110,84 +111,96 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 70px;
+  gap: 16px;
 }
 
 .mobile-menu-btn {
   display: none;
-  background: transparent;
+  background: #f4f4f6;
   border: none;
-  padding: 8px;
+  width: 40px;
+  height: 40px;
   color: var(--text-main);
   cursor: pointer;
   border-radius: var(--radius-sm);
   align-items: center;
   justify-content: center;
+  transition: var(--transition);
+}
+
+.mobile-menu-btn:hover {
+  background: #ebebee;
 }
 
 .mobile-menu-btn:active {
-  background: #f4f4f5;
+  background: #e2e2e7;
+  transform: scale(0.96);
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1.55rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: var(--primary);
+  justify-content: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  line-height: 1;
 }
 
-.brand span {
-  color: var(--accent);
-  font-style: italic;
+.brand-logo-img {
+  height: 44px;
+  max-height: 44px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  display: block;
+  transition: transform 0.2s ease;
 }
 
-.brand-tag {
-  font-size: 0.65rem;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--text-muted);
-  border-left: 1px solid var(--border-light);
-  padding-left: 8px;
+.brand:hover .brand-logo-img {
+  transform: scale(1.02);
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 6px;
+  flex-wrap: nowrap;
 }
 
 .nav-links a {
-  font-size: 0.92rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  transition: var(--transition);
-  position: relative;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #4b5563;
+  padding: 8px 13px;
+  border-radius: var(--radius-full);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  letter-spacing: -0.2px;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover {
   color: var(--primary);
+  background: #f3f4f6;
+}
+
+.nav-links a.active {
+  color: #111827;
+  background: #f3f4f6;
+  font-weight: 700;
 }
 
 .nav-links a.active::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--primary);
-  border-radius: 2px;
+  display: none;
 }
 
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .search-box {
@@ -197,38 +210,39 @@ button {
 }
 
 .search-box input {
-  padding: 9px 16px 9px 38px;
+  padding: 8px 16px 8px 36px;
   border-radius: var(--radius-full);
-  border: 1px solid var(--border-light);
-  background: #f8f8f9;
-  font-size: 0.88rem;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  font-size: 0.85rem;
   outline: none;
-  width: 220px;
-  transition: var(--transition);
+  width: 200px;
+  color: var(--text-main);
+  transition: all 0.24s ease;
 }
 
 .search-box input:focus {
   background: #fff;
-  border-color: var(--primary);
-  width: 260px;
-  box-shadow: 0 0 0 3px rgba(18, 18, 18, 0.08);
+  border-color: #111827;
+  width: 230px;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
 }
 
 .search-box svg {
   position: absolute;
   left: 12px;
-  width: 17px;
-  height: 17px;
-  stroke: var(--text-muted);
+  width: 15px;
+  height: 15px;
+  stroke: #9ca3af;
   pointer-events: none;
 }
 
 .action-btn {
-  background: #f4f4f5;
+  background: #f3f4f6;
   color: var(--text-main);
   border: 1px solid transparent;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
@@ -238,6 +252,13 @@ button {
 }
 
 .action-btn:hover {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+}
   background: #ebebeb;
   transform: translateY(-1px);
 }
@@ -1378,8 +1399,8 @@ button {
   }
 }
 
-/* Medium Tablets & Mobile Breakpoint (<= 900px) */
-@media (max-width: 900px) {
+/* Medium Tablets & Mobile Breakpoint (<= 1024px) */
+@media (max-width: 1024px) {
   .mobile-menu-btn {
     display: flex;
   }

@@ -1,0 +1,10 @@
+# Temporary processing scripts and data dumps
+New folder/*.ps1
+New folder/*.xml
+New folder/*.csv
+New folder/*.txt
+New folder/sorted_products.json
+New folder/orig_app.js
+New folder/patch_app.js
+New folder/new_products.js
+New folder/final_arranged_products.js

@@ -6,9 +6,10 @@
   <meta name="theme-color" content="#121212" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <title>MEHER ATELIER — Curated Women's Kurtis, Farshi Salwar Suits & Ethnic Wear | Amazon Associates</title>
+  <title>Curated Women's Ethnic Wear, Kurtis &amp; Beauty | Amazon Associates</title>
   <meta name="description" content="Shop hand-picked women's cotton kurtis, farshi salwar suits, kurti palazzo sets, and festive anarkalis verified on Amazon with fast Prime delivery." />
   <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
   
 </head>
 <body>
@@ -31,8 +32,8 @@
         </svg>
       </button>
 
-      <a href="#" class="brand" title="MEHER Atelier">
-        <span class="brand-text">Meher</span>
+      <a href="#" class="brand" title="Home">
+        <img src="images/logo.jpg" alt="Logo" class="brand-logo-img" />
       </a>
 
       <!-- Desktop Navigation Links -->
@@ -42,6 +43,9 @@
         <a href="#shop" onclick="setCategory('palazzo', this)">Kurta & Palazzo Sets</a>
         <a href="#shop" onclick="setCategory('suits', this)">Festive 3-Piece Sets</a>
         <a href="#shop" onclick="setCategory('short-kurti', this)">Short Kurtis</a>
+        <a href="#shop" onclick="setCategory('anarkali', this)">Anarkali Sets</a>
+        <a href="#shop" onclick="setCategory('perfumes', this)">Perfumes</a>
+        <a href="#shop" onclick="setCategory('beauty', this)">Beauty &amp; Makeup</a>
       </nav>
 
       <div class="nav-actions">
@@ -70,7 +74,7 @@
   <aside class="mobile-nav-drawer" id="mobileNavDrawer">
     <div class="mobile-nav-header">
       <div class="brand">
-        <span class="brand-text">Meher</span>
+        <img src="images/logo.jpg" alt="Logo" class="brand-logo-img" />
       </div>
       <button class="close-btn" onclick="toggleMobileNav()">&times;</button>
     </div>
@@ -78,7 +82,7 @@
       <div class="mobile-nav-label">Shop Collections</div>
       <nav class="mobile-category-links">
         <a href="#shop" class="mobile-nav-item active" onclick="setCategory('all'); toggleMobileNav();">
-          <span>👗 All Styles (14)</span>
+          <span>👗 All Styles (52)</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </a>
         <a href="#shop" class="mobile-nav-item" onclick="setCategory('farshi-suits'); toggleMobileNav();">
@@ -99,6 +103,14 @@
         </a>
         <a href="#shop" class="mobile-nav-item" onclick="setCategory('anarkali'); toggleMobileNav();">
           <span>👑 Anarkali Sets</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#shop" class="mobile-nav-item" onclick="setCategory('perfumes'); toggleMobileNav();">
+          <span>🌸 Perfumes</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#shop" class="mobile-nav-item" onclick="setCategory('beauty'); toggleMobileNav();">
+          <span>💄 Beauty &amp; Makeup</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </a>
       </nav>
@@ -176,12 +188,14 @@
       <!-- Filters & Sorting Bar -->
       <div class="filters-bar">
         <div class="category-pills">
-          <button class="pill-btn active" onclick="setCategory('all', this)">All Styles (14)</button>
+          <button class="pill-btn active" onclick="setCategory('all', this)">All Styles (52)</button>
           <button class="pill-btn" onclick="setCategory('farshi-suits', this)">Farshi Salwar Suits</button>
           <button class="pill-btn" onclick="setCategory('palazzo', this)">Kurta & Palazzo Sets</button>
           <button class="pill-btn" onclick="setCategory('suits', this)">Festive 3-Piece Sets</button>
           <button class="pill-btn" onclick="setCategory('short-kurti', this)">Short Kurtis & Tunics</button>
           <button class="pill-btn" onclick="setCategory('anarkali', this)">Anarkali Sets</button>
+          <button class="pill-btn" onclick="setCategory('perfumes', this)">Perfumes</button>
+          <button class="pill-btn" onclick="setCategory('beauty', this)">Beauty &amp; Makeup</button>
         </div>
 
         <div class="sort-select-wrapper">
